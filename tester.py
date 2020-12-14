@@ -8,6 +8,7 @@ from subprocess import PIPE
 get_problem_num = input("Number of problem  ")
 get_problem_let = input("Letter of problem  ")
 
+
 url = f'https://codeforces.com/problemset/problem/{get_problem_num}/{get_problem_let}'
 
 Code_force_raw = requests.get(url).text
@@ -57,8 +58,8 @@ input_scts = input_sections(soup)
 output_sections = output_sections(soup)
 
 
-print(input_scts) #testing here
-print(output_sections) #testing here
+#print(input_scts) #testing here
+#print(output_sections) #testing here
 
 def prog_output_function(input_list):
     response_array = []
@@ -84,14 +85,14 @@ def prog_output_function(input_list):
 
         response_array.append(block_result)
     
-    print(response_array) #testing here
+    #print(response_array) #testing here
     return response_array
 
 def matching_phase(program_response, output_divs):
     if program_response==output_divs:
-        return True
+        return "Correct"
     else:
-        return False
+        return "Incorrect"
     
 
 

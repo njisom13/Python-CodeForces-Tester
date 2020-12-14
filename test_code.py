@@ -18,7 +18,7 @@ def balanced_bitstring(bs,n,k):
                     return "NO"
     ones,zeroes=s[0:k].count('1'),s[0:k].count('0')
     if ones<=k/2 and zeroes<=k/2:
-        return "Yes"
+        return "YES"
     return "NO"
  
 if __name__ == '__main__':
